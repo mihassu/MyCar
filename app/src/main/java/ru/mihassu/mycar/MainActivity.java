@@ -1,12 +1,14 @@
 package ru.mihassu.mycar;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -20,7 +22,13 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ru.mihassu.mycar.AddNewPartActivity.PART_NAME;
+import static ru.mihassu.mycar.AddNewPartActivity.CHANGE_DATE;
+import static ru.mihassu.mycar.AddNewPartActivity.MILEAGE;
+
 public class MainActivity extends AppCompatActivity implements MainContract.View{
+
+    public static final int REQUEST_ACCES_TYPE = 1;
 
     private RecyclerView recyclerView;
     private ItemCardAdapter adapter;
@@ -46,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
 
-                presenter.add("Масло");
+                Intent intent = new Intent(MainActivity.this, AddNewPartActivity.class);
+                startActivityForResult(intent, REQUEST_ACCES_TYPE);
             }
         });
     }
@@ -76,6 +85,22 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == REQUEST_ACCES_TYPE){
+            if(resultCode == RESULT_OK){
+                try {
+                    presenter.add(data.getStringExtra(PART_NAME));
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     private void initRecyclerView() {

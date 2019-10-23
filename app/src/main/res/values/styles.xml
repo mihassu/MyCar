@@ -17,4 +17,9 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--Цвет подсказки-->
+    <style name="EditTextHintStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@android:color/holo_blue_bright</item>
+    </style>
+
 </resources>

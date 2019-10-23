@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">My Car</string>
     <string name="action_settings">Settings</string>
+
+    <string name="partName">Что меняем</string>
+    <string name="changeDate">Дата замены</string>
+    <string name="mileage">Пробег</string>
+    <string name="add_part">Добавить</string>
 </resources>
