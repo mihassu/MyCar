@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView android:id="@+id/card_view"
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
@@ -22,7 +24,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="2"
-            android:text="name"
+            tools:text="Масло"
             />
 
         <LinearLayout
@@ -35,13 +37,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="title"/>
+                tools:text="12.11.2019"/>
             <TextView
                 android:id="@+id/item_mileage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="description"/>
+                tools:text="84000"/>
 
         </LinearLayout>
 

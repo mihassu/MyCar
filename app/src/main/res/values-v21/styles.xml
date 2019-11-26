@@ -1,10 +1,5 @@
 <resources>
 
-    <style name="ElevationStyle">
-        <item name="android:elevation">16dp</item>
-        <item name="android:textSize">24dp</item>
-    </style>
-
     <!--Цвет поля ввода в неактивном и активном состоянии-->
     <style name="EditTextStyle" parent="Theme.AppCompat.Light">
         <item name="android:colorControlNormal">@android:color/darker_gray</item>

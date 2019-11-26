@@ -5,5 +5,9 @@
     <string name="partName">Что меняем</string>
     <string name="changeDate">Дата замены</string>
     <string name="mileage">Пробег</string>
-    <string name="add_part">Добавить</string>
+    <string name="add_part">Добавить замену</string>
+    <string name="add_note">Добавить запись</string>
+    <string name="clear_base">Очистить базу</string>
+    <string name="spare_parts">Что менялось</string>
+    <string name="spare_parts_details">Детали замены</string>
 </resources>

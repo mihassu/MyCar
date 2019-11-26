@@ -15,10 +15,10 @@
         app:hintTextAppearance="@style/EditTextHintStyle"
         >
 
-        <EditText android:id="@+id/edit_part_name"
+        <EditText android:id="@+id/edit_new_mileage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/partName"
+            android:hint="@string/mileage"
             android:theme="@style/EditTextStyle"
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -32,7 +32,7 @@
         app:hintTextAppearance="@style/EditTextHintStyle">
 
 
-        <EditText android:id="@+id/edit_change_date"
+        <EditText android:id="@+id/edit_new_change_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/changeDate"
@@ -41,25 +41,8 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:hintTextAppearance="@style/EditTextHintStyle"
-        >
-
-        <EditText android:id="@+id/edit_mileage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/mileage"
-            android:theme="@style/EditTextStyle"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/button_add_part"
+        android:id="@+id/button_add_new_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_part"/>
